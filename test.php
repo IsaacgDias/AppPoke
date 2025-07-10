@@ -1,5 +1,5 @@
 <?php
-require_once("Dao/PokemonDao.php");
+require_once("dao/PokemonDao.php");
 
 $dao = new PokemonDao();
 
