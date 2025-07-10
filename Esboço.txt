@@ -1,0 +1,23 @@
+-----------------------------------------
+
+IDE: Visual Studios Code
+Estutura: MVC DAO
+
+Backend: PHP
+Frontend: HTML, CSS, Javascript
+
+Controller:
+PokemonController.php - Vai chamar o Dao
+
+Dao:
+PokemonDao.php - Vai comunica com a PokeApi
+
+Model:
+Pokemon.php - Classe com atributos
+
+Views:
+index.php  - Exibição da Página
+
+-----------------------------------------
+
+
