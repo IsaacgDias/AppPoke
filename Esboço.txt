@@ -2,6 +2,7 @@
 
 IDE: Visual Studios Code
 Estutura: MVC DAO
+Servidor Web: Xampp
 
 Backend: PHP
 Frontend: HTML, CSS, Javascript
