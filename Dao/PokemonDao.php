@@ -12,7 +12,7 @@ class PokemonDao {
                 }
             
             $dados = json_decode($resposta, true);
-
+            
             $pokemon = new Pokemon();
             $pokemon->setID($dados['id']);
             $pokemon->setNome(ucfirst($dados['name']));
