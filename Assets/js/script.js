@@ -91,9 +91,9 @@ $(document).ready(function () {
           <td>${poke.id}</td>
           <td>${poke.nome}</td>
           <td>${poke.tipo}</td>
-          <td><img src="${poke.imagem}" width="50"></td>
+          <td><img src="${poke.imagem}"></td>
           <td>
-            <button class="btn btn-danger btn-sm btn-remover" title="Remover Pokémon">
+            <button class="btn btn-outline-danger btn-sm btn-remover" title="Remover Pokémon">
               <i class="bi bi-trash"></i>
             </button>
           </td>
@@ -114,7 +114,7 @@ $(document).ready(function () {
   function resetarCampos() { 
     $('#campos-container').html(`
       <label for="codigo1">Código:</label>
-      <input type="text" class="form-control mb-2" id="codigo1" name="codigo[]" placeholder="Código">
+      <input type="number" class="form-control mb-3" id="codigo1" name="codigo[]" placeholder="Código">
     `);
     contador = 1;
   }

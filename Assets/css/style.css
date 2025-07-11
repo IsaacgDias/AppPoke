@@ -4,16 +4,17 @@ table {
   margin: 20px 0;
   font-family: Arial, sans-serif;
   font-size: 16px;
+  text-align: center;
 }
 
 thead tr {
   background-color: #bebebe;
   color: white;
-  text-align: left;
+
 }
 
 th, td {
-  padding: 12px 15px;
+  padding: 2px 3px;
   border: 1px solid #ddd;
 }
 
@@ -24,4 +25,15 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
   background-color: #d6d6d6;
   cursor: pointer;
+}
+
+.btnMais {
+  border-radius: 50%;
+}
+
+/* remoção de setas de input number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

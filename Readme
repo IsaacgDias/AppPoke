@@ -7,7 +7,8 @@ Servidor Web: Xampp
 Link: http://localhost/PokeApp/
 
 Backend: PHP
-Frontend: HTML, CSS, Javascript
+Frontend: HTML, CSS, Javascript, jQuery, Bootstrap
+Comunicação: AJAX com jQuery
 
 Controller:
 PokemonController.php - Vai chamar o Dao
