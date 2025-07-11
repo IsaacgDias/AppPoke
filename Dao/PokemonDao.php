@@ -1,5 +1,5 @@
 <?php
-require_once("./model/Pokemon.php");
+require_once("../model/Pokemon.php");
 
 class PokemonDao {
     public function buscarPorID($id) {
