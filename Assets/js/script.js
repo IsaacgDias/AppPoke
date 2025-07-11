@@ -1,7 +1,11 @@
 let contador = 1;
 
-$(document).ready(function () {
+// Variaveis para controle de dados por página
+let pokemonsArmazenados = [];
+let indexAtual = 0;
+const quantidadePorPagina = 10;
 
+$(document).ready(function () {
   inicializarEventos();
 
   function inicializarEventos() {
@@ -9,6 +13,8 @@ $(document).ready(function () {
     $('#salvarPokemons').click(salvarPokemons);
     $('#staticBackdrop').on('shown.bs.modal', resetarCampos);
     $('#pokemonTable tbody').on('click', '.btn-remover', removerPokemonTable)
+    $('#carregarMais').hide();
+    $('#carregarMais').click(carregarMaisPokemons);
   }
 
   // Adiciona nova linha no input no modal
@@ -52,8 +58,14 @@ $(document).ready(function () {
           alert(pokemons.erro);
           return;
         }
+        
+        // Armazena os Pokémons no array "virtual"
+        pokemonsArmazenados = pokemonsArmazenados.concat(pokemons);
 
-        adicionarPokemonsNaTabela(pokemons)
+        // Mostra apenas o próximo lote (máx. 10)
+        indexAtual = 0;
+        $('#pokemonTable tbody').empty();
+        carregarMaisPokemons();
 
         // Fecha o modal
         const modal = bootstrap.Modal.getInstance(document.getElementById('staticBackdrop'));
@@ -69,8 +81,11 @@ $(document).ready(function () {
   }
 
   // Adiciona os pokemons recebidos na tabela
-  function adicionarPokemonsNaTabela(pokemons) {
-    pokemons.forEach(function (poke) {
+  function carregarMaisPokemons() {
+    let limite = indexAtual + quantidadePorPagina;
+    let pokemonsParaMostrar = pokemonsArmazenados.slice(indexAtual, limite);
+
+    pokemonsParaMostrar.forEach(function (poke) {
       $('#pokemonTable tbody').append(`
         <tr>
           <td>${poke.id}</td>
@@ -85,6 +100,14 @@ $(document).ready(function () {
         </tr>
       `);
     });
+
+    indexAtual += pokemonsParaMostrar.length;
+
+    if (indexAtual >= pokemonsArmazenados.length) {
+      $('#carregarMais').hide();
+    } else {
+      $('#carregarMais').show();
+    }
   }
 
   // Reseta o conteúdo do container com o input inicial toda vez que o modal abrir
