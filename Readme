@@ -17,7 +17,7 @@ Model:
 Pokemon.php - Classe com atributos
 
 Views:
-index.php  - Exibição da Página
+index.html  - Exibição da Página
 
 -----------------------------------------
 
