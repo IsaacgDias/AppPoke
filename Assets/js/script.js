@@ -1,6 +1,3 @@
-// -- Lógica do Modal bootstrap --
-
-// Evento ao clicar em adicionar linha
 let contador = 1;
 
 $(document).ready(function () {
