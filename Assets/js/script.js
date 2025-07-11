@@ -55,7 +55,11 @@ $(document).ready(function () {
               <td>${poke.nome}</td>
               <td>${poke.tipo}</td>
               <td><img src="${poke.imagem}" width="50"></td>
-              <td>✓</td>
+              <td>
+                <button class="btn btn-danger btn-sm btn-remover" title="Remover Pokémon">
+                  <i class="bi bi-trash"></i>
+                </button>
+              </td>
             </tr>
           `);
         });
@@ -80,6 +84,11 @@ $(document).ready(function () {
       <input type="text" class="form-control mb-2" id="codigo1" name="codigo[]" placeholder="Código">
     `);
     contador = 1;
+  });
+
+  // Remove Pokemon ao clicar no botão da lixeira
+  $('#pokemonTable tbody').on('click', '.btn-remover', function() {
+    $(this).closest('tr').remove();
   });
 });
 
