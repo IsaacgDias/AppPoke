@@ -1,28 +1,33 @@
------------------------------------------
+# PokeApp - Aplicação MVC com PHP, AJAX e PokeAPI
 
-IDE: Visual Studios Code
-Estutura: MVC DAO
-Servidor Web: Xampp
+## Tecnologias Utilizadas
+- Backend: PHP
+- Frontend: HTML, CSS, JavaScript, jQuery, Bootstrap
+- Comunicação: AJAX (com jQuery)
+- Servidor: XAMPP
+- API Externa: PokeAPI
 
-Link: http://localhost/PokeApp/
+## Estrutura do Projeto (MVC + DAO)
+- **Controller:** `PokemonController.php` (lógica de controle)
+- **DAO:** `PokemonDao.php` (faz a comunicação com a API)
+- **Model:** `Pokemon.php` (classe com os atributos)
+- **Views:** `index.html` (exibição da página)
 
-Backend: PHP
-Frontend: HTML, CSS, Javascript, jQuery, Bootstrap
-Comunicação: AJAX com jQuery
+## Como Rodar o Projeto
 
-Controller:
-PokemonController.php - Vai chamar o Dao
+### 1. Baixar e Instalar o XAMPP
+- **Acesse o site oficial do XAMPP para download
+- **Após o download, instale e inicie o serviço Apache no painel de controle do XAMPP.
 
-Dao:
-PokemonDao.php - Vai comunica com a PokeApi
+### 2. Configurar o Projeto
+1. Navegue até a pasta `htdocs` do XAMPP:
+   - Exemplo: `C:\xampp\htdocs`
+2. Copie a pasta do projeto `PokeApp` para dentro de `htdocs`.
 
-Model:
-Pokemon.php - Classe com atributos
+### 3. Executar no Navegador
+Abra o navegador e digite o seguinte endereço: http://localhost/PokeApp/
 
-Views:
-index.html  - Exibição da Página
-
------------------------------------------
-
-![Image](https://github.com/IsaacgDias/AppPoke/blob/7c23f7aab05870501fe164b0271b42c38e304b7e/img/img-tutorial/Captura1.PNG)
+## Link da API Utilizada
+Documentação oficial da PokeAPI:  
+[https://pokeapi.co/docs/v2](https://pokeapi.co/docs/v2)
 
