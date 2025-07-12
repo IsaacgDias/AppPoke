@@ -31,3 +31,5 @@ Abra o navegador e digite o seguinte endereço: http://localhost/PokeApp/
 Documentação oficial da PokeAPI:  
 [https://pokeapi.co/docs/v2](https://pokeapi.co/docs/v2)
 
+
+
